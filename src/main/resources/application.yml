@@ -1,0 +1,14 @@
+spring:
+  application.name: jediscache
+  datasource:
+    url: "jdbc:mysql://localhost:3306/fastsns"
+    username: root
+    password: Wjdfb1015!
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+  data:
+    redis:
+      host: localhost
+      port: 6379
