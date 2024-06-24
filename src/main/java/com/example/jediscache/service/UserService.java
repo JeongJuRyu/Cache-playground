@@ -47,7 +47,7 @@ public class UserService {
         return cachedUser;
     }
 
-//    @Cacheable(cacheNames = CACHE1, key = "'user:' + #id")
+    @Cacheable(cacheNames = CACHE1, key = "'user:' + #id")
 //    @Cacheable(value = "getUser3", key = "'user:' + #id")
     public User getUser3(final Long id) {
         return userRepository.findById(id).orElseThrow(() -> new RuntimeException());
