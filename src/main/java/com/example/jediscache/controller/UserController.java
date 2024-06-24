@@ -1,5 +1,6 @@
 package com.example.jediscache.controller;
 
+import com.example.jediscache.entity.RedisHashUser;
 import com.example.jediscache.entity.User;
 import com.example.jediscache.service.UserService;
 import lombok.RequiredArgsConstructor;
@@ -14,7 +15,12 @@ import java.util.concurrent.TimeUnit;
 public class UserController {
     private final UserService userService;
     @GetMapping("/users/{id}")
-    public User getUserEmail(@PathVariable Long id){
+    public User getUser(@PathVariable Long id){
         return userService.getUser(id);
+    }
+
+    @GetMapping("/redishash-users/{id}")
+    public RedisHashUser getUser2(@PathVariable Long id){
+        return userService.getUser2(id);
     }
 }
