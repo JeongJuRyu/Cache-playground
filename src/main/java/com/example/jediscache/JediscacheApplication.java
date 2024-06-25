@@ -17,7 +17,6 @@ public class JediscacheApplication implements ApplicationRunner {
     public static void main(String[] args) {
         SpringApplication.run(JediscacheApplication.class, args);
     }
-
     @Override
     public void run(ApplicationArguments args) throws Exception {
         userRepository.save(User.builder()
